@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/FirmadorDigital-1.0.0-RELEASE.jar /app/app.jar
 
 # Copia el archivo application.properties al contenedor
-COPY application.properties /app/application.properties
+COPY ./application.properties /app/application.properties
 
 # Establece la variable de entorno JAVA_TOOL_OPTIONS para la codificación
 ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8

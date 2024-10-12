@@ -97,20 +97,28 @@ Este microservicio se encarga de firmar documentos digitales y de encriptar cont
 
 Para levantar el microservicio, asegúrate de tener instalado Docker y Docker Compose en tu máquina. Luego, sigue estos pasos:
 
-1. **Construir el proyecto con Maven:**
+1. **Instalar las librerías agregadas al directorio libs**
+
+    Ejecuta el siguiente comando:
+    ```bash
+    ./install-libs.sh
+    ```
+
+2. **Construir el proyecto con Maven:**
 
    Ejecuta el siguiente comando en la raíz del proyecto para compilar el código y empaquetar el microservicio:
 
    ```bash
    mvn clean package
    ```
-2. **Copiar archivo application.propierties.dist a application.propierties y  reemplazar el valor de:**
+
+3. **Copiar archivo application.properties.dist a application.properties y  reemplazar el valor de:**
 
     ```bash
    encryption.secret-key=clave_en_b64
    ```
 
-3. **Construir la imagen de Docker:**
+4. **Construir la imagen de Docker:**
 
    Después de compilar el proyecto, construye la imagen de Docker usando Docker Compose:
 
@@ -118,7 +126,7 @@ Para levantar el microservicio, asegúrate de tener instalado Docker y Docker Co
    docker-compose build
    ```
 
-3. **Levantar el contenedor:**
+5. **Levantar el contenedor:**
 
    Finalmente, ejecuta el siguiente comando para levantar el contenedor en segundo plano:
 

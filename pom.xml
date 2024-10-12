@@ -13,6 +13,8 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.version>2.5.0</spring.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target> 
     </properties>
 
     <dependencies>
@@ -88,6 +90,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.version}</version>
+                <configuration>
+	                <source>${maven.compiler.source}</source>  <!-- Usa la propiedad configurada -->
+	                <target>${maven.compiler.target}</target>  <!-- Usa la propiedad configurada -->
+	            </configuration>
                 <executions>
                     <execution>
                         <goals>
