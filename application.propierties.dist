@@ -1,0 +1,3 @@
+spring.application.name=FirmadorDigital
+encryption.secret-key=
+server.port=1605

@@ -1,0 +1,11 @@
+services:
+  ms-firma-digital-samoyed:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1609:1605"  # Exponer el puerto 1609 externamente, usar 1605 internamente
+    environment:
+      - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+    volumes:
+      - ./application.properties:/app/application.properties  # Monta el archivo de configuración local
