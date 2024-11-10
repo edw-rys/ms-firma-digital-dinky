@@ -1,11 +1,13 @@
 # Usa una imagen base de OpenJDK 8
 FROM openjdk:8-jdk-alpine
 
+ARG DOCKER_VERSION
+
 # Establece un directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copia el archivo JAR desde target al contenedor
-COPY target/FirmadorDigital-1.0.0-RELEASE.jar /app/app.jar
+COPY target/FirmadorDigital-${DOCKER_VERSION}.jar /app/app.jar
 
 # Copia el archivo application.properties al contenedor
 COPY ./application.properties /app/application.properties
