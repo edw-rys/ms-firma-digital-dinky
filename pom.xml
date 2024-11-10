@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.edwdev.samoyed.firmador</groupId>
     <artifactId>FirmadorDigital</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
     <packaging>jar</packaging>
     <name>FirmadorDigital</name>
     <description>Aplicación para firmar documentos digitalmente</description>
@@ -106,4 +106,3 @@
     </build>
 
 </project>
-
