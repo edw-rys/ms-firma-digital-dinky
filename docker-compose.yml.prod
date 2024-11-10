@@ -1,0 +1,19 @@
+services:
+  ms-firma-digital-samoyed:
+    image: edwrys/ms-firma-digital-dinky:latest 
+    ports:
+      - "1609:1605"
+    restart: always
+    environment:
+      - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 -Xms256m -Xmx512m
+    volumes:
+      - ./application.properties:/app/application.properties
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    networks:
+      - ENV_DOCKER_NETWORK
+networks:
+  ENV_DOCKER_NETWORK:
+    driver: bridge
